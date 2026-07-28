@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실과(농업생명과학) 임용 스타일 문항 온라인 풀이</title>
+<style>
+  :root {
+    --primary: #2c6e49; --primary-light: #e8f3ed; --accent: #1a5276;
+    --correct: #1e8449; --wrong: #c0392b; --border: #d5dbdb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+    margin: 0; background: #f4f6f6; color: #222; line-height: 1.7;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 16px; }
+  header {
+    background: var(--primary); color: #fff; padding: 28px 20px; text-align: center;
+  }
+  header h1 { margin: 0 0 8px; font-size: 1.5em; }
+  header p { margin: 4px 0; opacity: .9; font-size: .95em; }
+  .card {
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px 24px; margin: 18px 0; box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  }
+  .q-title {
+    font-size: 1.2em; font-weight: bold; color: var(--primary);
+    border-bottom: 2px solid var(--primary); padding-bottom: 8px; margin-bottom: 14px;
+  }
+  .stimulus {
+    background: var(--primary-light); border: 1px solid #bcd9c8;
+    border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: .97em;
+  }
+  .stimulus h4 { margin: 6px 0; color: var(--accent); }
+  .dialog p { margin: 8px 0; }
+  .dialog .spk { font-weight: bold; }
+  u { text-decoration: underline; text-underline-offset: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; background: #fff; }
+  th, td { border: 1px solid #999; padding: 6px 10px; font-size: .93em; text-align: left; }
+  th { background: #eef2f0; }
+  .subq { margin: 18px 0; padding: 14px; border: 1px solid var(--border); border-radius: 8px; }
+  .subq-label { font-weight: bold; margin-bottom: 8px; }
+  .pts { color: var(--accent); font-weight: bold; }
+  input[type=text] {
+    width: 100%; max-width: 420px; padding: 9px 12px; font-size: 1em;
+    border: 1.5px solid #aab; border-radius: 6px; font-family: inherit;
+  }
+  textarea {
+    width: 100%; min-height: 84px; padding: 10px 12px; font-size: 1em;
+    border: 1.5px solid #aab; border-radius: 6px; font-family: inherit; resize: vertical;
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
+  .btn {
+    display: block; margin: 26px auto; padding: 14px 48px; font-size: 1.15em;
+    background: var(--primary); color: #fff; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: bold; font-family: inherit;
+  }
+  .btn:hover { background: #1e5233; }
+  .result { display: none; margin-top: 10px; padding: 12px 14px; border-radius: 8px; font-size: .95em; }
+  .result.ok { display: block; background: #e9f7ef; border: 1px solid var(--correct); }
+  .result.no { display: block; background: #fdedec; border: 1px solid var(--wrong); }
+  .result.self { display: block; background: #fef9e7; border: 1px solid #d4ac0d; }
+  .badge { font-weight: bold; }
+  .badge.ok { color: var(--correct); }
+  .badge.no { color: var(--wrong); }
+  .model { background: #fff; border-left: 4px solid var(--primary); padding: 8px 12px; margin: 8px 0; }
+  .rubric { font-size: .9em; color: #444; margin-top: 6px; }
+  .selfgrade { margin-top: 10px; }
+  .selfgrade label { margin-right: 14px; cursor: pointer; }
+  #scoreBoard {
+    display: none; position: sticky; bottom: 0; background: var(--accent); color: #fff;
+    padding: 14px 20px; text-align: center; font-size: 1.15em; font-weight: bold;
+    box-shadow: 0 -2px 8px rgba(0,0,0,.2);
+  }
+  .note { font-size: .88em; color: #666; }
+  .locked { pointer-events: none; opacity: .75; }
+  #nameBox { text-align: center; }
+  #nameBox input { max-width: 260px; text-align: center; }
+  @media print { .btn, #scoreBoard { display: none !important; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>실과(농업생명과학) 임용 스타일 문항</h1>
+  <p>2022 개정 실과 교육과정 [6실04-07]~[6실04-11] · 3문항 · 총 14점</p>
+  <p class="note" style="color:#dfe;">단답형은 자동 채점되며, 서술형은 제출 후 모범답안을 보고 스스로 채점합니다.</p>
+</header>
+
+<div class="container">
+
+<div class="card" id="nameBox">
+  <label><strong>이름</strong> &nbsp;<input type="text" id="studentName" placeholder="이름을 입력하세요"></label>
+</div>
+
+<!-- ===================== 문항 1 ===================== -->
+<div class="card" id="q1">
+  <div class="q-title">문항 1 [총 5점]</div>
+  <p>다음은 동식물 자원 단원 수업을 준비하는 교사 협의회 대화의 일부이다. 물음에 답하시오.</p>
+
+  <div class="stimulus dialog">
+    <h4>(가) 교사 협의회 대화</h4>
+    <p><span class="spk">김 교사:</span> 다음 주에 [6실04-07] 성취기준으로 '생활 속 동식물 자원을 활용 목적에 따라 분류'하는 수업을 하려고 해요. 그런데 지난 시간에 한 학생이 ⓐ <u>"해바라기는 기름을 짜는 데 쓰이는 식물이니까 언제나 특용 작물로만 분류해야 해요."</u>라고 말하더라고요.</p>
+    <p><span class="spk">박 교사:</span> 그 부분은 분류 활동을 하기 전에 꼭 짚어 주어야 할 지점이네요. 그리고 작물 분류를 지도할 때 학생들이 어려워하는 것이 ( ㉠ )(이)에요. 호밀이나 자운영처럼 일정 기간 자라게 한 후 갈아엎어 비료로 사용하는 작물인데, 먹기 위해 기르는 작물이 아니라서 학생들이 낯설어해요.</p>
+    <p><span class="spk">김 교사:</span> 네. 그리고 이 성취기준은 분류에서 끝나지 않고 동식물과 관련된 다양한 ㉡ <u>생명기술</u>을 탐색하는 것까지 이어져야 하잖아요. 돼지의 장기를 사람에게 이식하는 이종 장기 기술이나, 동물 줄기세포를 배양하여 만드는 배양육 같은 사례를 카드 자료로 준비하려고 해요.</p>
+    <p><span class="spk">박 교사:</span> 좋아요. 곤충도 좋은 소재예요. 갈색거저리 애벌레는 단백질 등 영양소가 풍부해서 미래 식량 자원으로 활용되고 있으니까요.</p>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">1) (가)의 괄호 ㉠에 들어갈 말을 쓰시오. <span class="pts">[1점]</span></div>
+    <input type="text" id="q1_1" placeholder="답을 입력하세요" autocomplete="off">
+    <div class="result" id="r_q1_1"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">2) (가)의 밑줄 친 ⓐ에 나타난 학생의 오개념이 무엇인지 ① 작물 분류의 관점에서 쓰고, ② 해바라기를 예로 들어 이 오개념을 바로잡기 위한 지도 내용을 1가지 서술하시오. <span class="pts">[2점]</span></div>
+    <p class="note">①</p>
+    <textarea id="q1_2a" placeholder="학생의 오개념을 작물 분류의 관점에서 서술하세요"></textarea>
+    <p class="note">②</p>
+    <textarea id="q1_2b" placeholder="해바라기를 예로 든 지도 내용을 서술하세요"></textarea>
+    <div class="result" id="r_q1_2"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">3) (가)의 밑줄 친 ㉡ '생명기술'의 ① 의미를 쓰고, ② (가)에 제시되지 않은 동식물 자원 관련 생명기술 활용 사례를 1가지 쓰시오. <span class="pts">[2점]</span></div>
+    <p class="note">① 생명기술의 의미</p>
+    <textarea id="q1_3a" placeholder="생명기술의 의미를 서술하세요"></textarea>
+    <p class="note">② 활용 사례 1가지</p>
+    <input type="text" id="q1_3b" placeholder="(가)에 제시되지 않은 사례 1가지" autocomplete="off">
+    <div class="result" id="r_q1_3"></div>
+  </div>
+</div>
+
+<!-- ===================== 문항 2 ===================== -->
+<div class="card" id="q2">
+  <div class="q-title">문항 2 [총 5점]</div>
+  <p>(가)는 초임 교사가 작성한 교수·학습 과정안의 일부이고, (나)는 이 수업 후 학생이 작성한 식물 가꾸기 관찰 일지의 일부이며, (다)는 수업 협의회에서 나눈 대화의 일부이다. 물음에 답하시오.</p>
+
+  <div class="stimulus">
+    <h4>(가) 교수·학습 과정안</h4>
+    <table>
+      <tr><th style="width:22%;">단원</th><td>생활 속 동식물 기르고 가꾸기</td></tr>
+      <tr><th>성취기준</th><td>[6실04-08] 생활 속 동식물을 기르고 가꾸는 방법을 알고, 동식물을 기르고 가꾸는 체험을 통해 ( ㉠ )을/를 가진다.</td></tr>
+      <tr><th>학습 목표</th><td>채소를 기르는 방법을 알고, 학교 텃밭에 상추와 방울토마토를 심어 가꿀 수 있다.</td></tr>
+    </table>
+    <table>
+      <tr><th style="width:22%;">단계</th><th>교수·학습 활동</th></tr>
+      <tr><td>도입</td><td>· 식물이 자라는 데 알맞은 환경 조건(햇빛, 온도, 수분, 공기, 토양) 떠올리기</td></tr>
+      <tr><td>전개 1</td><td>· 씨앗의 크기에 알맞은 씨뿌리기 방법(흩어뿌림, 줄뿌림, 점뿌림) 알아보기<br>· 상추 씨앗 뿌리기, 방울토마토 모종 옮겨심기</td></tr>
+      <tr><td>전개 2</td><td>· 식물 관리 방법(물 주기, 솎아주기, 지지대 세우기 등) 실습하기</td></tr>
+      <tr><td>정리</td><td>· 자연 관찰 일기 쓰기 과제 안내하기</td></tr>
+    </table>
+  </div>
+
+  <div class="stimulus dialog">
+    <h4>(나) 학생의 식물 가꾸기 관찰 일지</h4>
+    <p>○월 ○일: 오늘 학교 텃밭에 씨앗과 모종을 심었다. ⓐ <u>상추 씨앗은 크기가 작아서 일정한 간격으로 골을 파지 않고 흙 표면에 고르게 펼쳐서 뿌렸다.</u> 방울토마토는 모종을 조심스럽게 꺼내 옮겨 심었다.</p>
+    <p>○월 ○일: ⓑ <u>물은 흙 표면이 하얗게 말라 갈라진 것을 확인한 다음에 주었고, 한 번 줄 때 조금씩만 자주 주기로 하였다.</u> 싹이 빽빽하게 나온 곳은 튼튼하게 자라도록 간격을 두고 솎아 주었다.</p>
+  </div>
+
+  <div class="stimulus dialog">
+    <h4>(다) 수업 협의회 대화</h4>
+    <p><span class="spk">초임 교사:</span> 텃밭 가꾸기를 하면서 식물 기르기에 흥미를 느끼지 못하던 학생들도 달라졌어요. 이 경험을 [6실04-10]의 농업활동 체험으로 확장하고 싶은데, 어떤 활동이 가능할까요?</p>
+    <p><span class="spk">수석 교사:</span> 2022 개정 실과 교육과정의 [6실04-10] 성취기준 해설에서는 생활상의 변화와 관련된 체험으로 실내원예활동, 농업생산물 가공활동, ( ㉡ ) 활동을 제시하고 있어요. 최근에는 식물이나 동물 같은 농업·농촌 자원을 활용하여 국민의 건강 회복 및 유지·증진을 도모하는 산업을 육성하기 위한 법률이 제정될 만큼 주목받고 있으니, 학교 텃밭 체험을 이런 진로·직업 세계와도 연결해 보세요.</p>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">1) (가)의 괄호 ㉠에 들어갈 말을 2022 개정 실과 교육과정 [6실04-08] 성취기준에 제시된 용어로 쓰시오. <span class="pts">[1점]</span></div>
+    <input type="text" id="q2_1" placeholder="답을 입력하세요" autocomplete="off">
+    <div class="result" id="r_q2_1"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">2) (나)의 밑줄 친 ⓐ, ⓑ 중 식물을 기르고 가꾸는 방법이 잘못된 것을 1가지 찾아 ① 기호를 쓰고, ② 그 내용을 물 주는 시기와 물의 양을 모두 포함하여 바르게 고쳐 서술하시오. <span class="pts">[2점]</span></div>
+    <p class="note">① 기호</p>
+    <input type="text" id="q2_2a" placeholder="ⓐ 또는 ⓑ" autocomplete="off" style="max-width:160px;">
+    <p class="note">② 바르게 고친 내용</p>
+    <textarea id="q2_2b" placeholder="물 주는 시기와 물의 양을 모두 포함하여 서술하세요"></textarea>
+    <div class="result" id="r_q2_2"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">3) (다)에서 ① 괄호 ㉡에 들어갈 말을 2022 개정 실과 교육과정 [6실04-10] 성취기준 해설에 제시된 용어로 쓰고, ② 밑줄 친 부분에 해당하는 산업의 명칭을 이 산업의 연구개발 및 육성에 관한 법률(2021년 시행)에 규정된 용어로 쓰시오. <span class="pts">[2점]</span></div>
+    <p class="note">①</p>
+    <input type="text" id="q2_3a" placeholder="성취기준 해설에 제시된 용어" autocomplete="off">
+    <p class="note">②</p>
+    <input type="text" id="q2_3b" placeholder="법률에 규정된 용어" autocomplete="off">
+    <div class="result" id="r_q2_3"></div>
+  </div>
+</div>
+
+<!-- ===================== 문항 3 ===================== -->
+<div class="card" id="q3">
+  <div class="q-title">문항 3 [총 4점]</div>
+  <p>(가)는 지속가능한 농업 단원 수업을 위한 교사 협의회 대화의 일부이고, (나)는 진로 탐색 활동지의 일부이다. 물음에 답하시오.</p>
+
+  <div class="stimulus dialog">
+    <h4>(가) 교사 협의회 대화</h4>
+    <p><span class="spk">최 교사:</span> [6실04-09]로 지속가능한 농업 수업을 준비하고 있어요. 그런데 ⓐ <u>친환경 농업과 지속가능한 농업은 결국 같은 것이니까 두 용어를 구분하지 않고 하나로 묶어서 가르치려고 해요.</u></p>
+    <p><span class="spk">정 교사:</span> 그 부분은 다시 검토해 보시면 좋겠어요. 그리고 학생들이 소비 생활과 농업의 순환을 연결해 보도록 ( ㉠ ) 개념도 다루면 좋아요. 농산물이 생산지로부터 운송, 유통 단계를 거쳐 소비자의 식탁에 이르는 과정을 식품 수송량(t)에 이동거리(km)를 곱하여 계산한 것인데, 이 값이 클수록 탄소 발생이 늘어나지요. 반경 50km 이내에서 생산된 로컬 푸드를 구매하면 이 값을 줄일 수 있다는 것까지 연결할 수 있어요.</p>
+    <p><span class="spk">최 교사:</span> 좋네요. 이어지는 [6실04-11] 수업에서는 농업과 농촌의 다원적인 역할을 진로 탐색과 연결해 보려고 활동지를 만들었어요.</p>
+  </div>
+
+  <div class="stimulus">
+    <h4>(나) 진로 탐색 활동지</h4>
+    <table>
+      <tr><th>농업·농촌의 다원적 역할</th><th>내용</th><th>관련 직업</th></tr>
+      <tr><td style="text-align:center;">( ㉡ )</td><td>논에 물을 담아 홍수를 예방하고, 아름다운 자연 경관을 보전한다.</td><td>경관 디자이너</td></tr>
+      <tr><td>생태계 보전</td><td>동식물에게 서식처를 제공하고, 생물의 다양성을 유지한다.</td><td>농업 환경 생태 연구원</td></tr>
+      <tr><td>식량 생산</td><td>우리가 살아가는 데 필요한 먹을거리를 안정적으로 생산하고 공급한다.</td><td>스마트팜 운영자</td></tr>
+    </table>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">1) (가)의 괄호 ㉠에 들어갈 용어를 쓰시오. <span class="pts">[1점]</span></div>
+    <input type="text" id="q3_1" placeholder="답을 입력하세요" autocomplete="off">
+    <div class="result" id="r_q3_1"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">2) (가)의 밑줄 친 ⓐ가 적절하지 않은 이유를 ① 친환경 농업이 우선적으로 고려하는 측면과 ② 지속가능한 농업이 균형 있게 고려하는 측면을 각각 포함하여 서술하시오. <span class="pts">[2점]</span></div>
+    <textarea id="q3_2" placeholder="①과 ②를 각각 포함하여 서술하세요"></textarea>
+    <div class="result" id="r_q3_2"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">3) (나)의 괄호 ㉡에 들어갈 농업·농촌의 다원적 역할을 쓰시오. <span class="pts">[1점]</span></div>
+    <input type="text" id="q3_3" placeholder="답을 입력하세요" autocomplete="off">
+    <div class="result" id="r_q3_3"></div>
+  </div>
+</div>
+
+<button class="btn" id="submitBtn" onclick="grade()">제출하고 채점하기</button>
+
+</div><!-- container -->
+
+<div id="scoreBoard"></div>
+
+<script>
+'use strict';
+
+// 정규화: 공백·괄호 안 내용·중점 제거, 소문자화
+function norm(s) {
+  return (s || '').toLowerCase()
+    .replace(/\([^)]*\)/g, '')
+    .replace(/[\s·・,\.]/g, '')
+    .trim();
+}
+function includesAny(text, words) { return words.some(w => text.includes(w)); }
+
+// ===== 단답형 자동 채점 정의 =====
+const shortAnswers = {
+  q1_1: {
+    pts: 1, label: '녹비 작물',
+    accept: a => ['녹비작물','녹비','녹색비료작물'].includes(a),
+    reject: [],
+    explain: '호밀·자운영처럼 일정 기간 자라게 한 후 갈아엎어 비료로 사용하는 작물은 <b>녹비 작물</b>(녹색 비료)입니다. 작물의 5분류: 식량·원예·특용·사료·녹비 작물.'
+  },
+  q2_1: {
+    pts: 1, label: '생태 존중감',
+    accept: a => a === '생태존중감',
+    explain: '[6실04-08] 성취기준 원문: "…체험을 통해 <b>생태 존중감</b>을 가진다." 발문 조건("성취기준에 제시된 용어")에 따라 \'생명 존중감\', \'생태 감수성\' 등은 오답입니다.'
+  },
+  q2_3a: {
+    pts: 1, label: '원예 및 동물치료',
+    accept: a => ['원예및동물치료','원예및동물치료활동'].includes(a),
+    explain: '[6실04-10] 성취기준 해설: 실내원예활동, 농업생산물 가공활동, <b>원예 및 동물치료</b> 활동. \'원예치료\', \'동물매개치료\' 단독 표기는 해설 원문 용어가 아니므로 오답입니다.'
+  },
+  q2_3b: {
+    pts: 1, label: '치유농업',
+    accept: a => a === '치유농업',
+    explain: '「치유농업 연구개발 및 육성에 관한 법률」(2021년 3월 시행) 제2조의 법정 용어는 <b>치유농업</b>입니다. — "국민의 건강 회복 및 유지·증진을 위하여 다양한 농업·농촌자원 또는 이와 관련한 활동과 산업을 활용하여 사회적 또는 경제적 부가가치를 창출하는 산업"'
+  },
+  q3_1: {
+    pts: 1, label: '푸드 마일리지',
+    accept: a => ['푸드마일리지','foodmileage','푸드마일리지개념'].includes(a),
+    explain: '<b>푸드 마일리지</b> = 식품 수송량(t) × 이동거리(km). 값이 클수록 탄소 발생이 늘어나며, 반경 50km 이내 로컬 푸드 구매로 줄일 수 있습니다. \'탄소 발자국\', \'로컬 푸드\'는 다른 개념이므로 오답입니다.'
+  },
+  q3_3: {
+    pts: 1, label: '환경 보전',
+    accept: a => ['환경보전','환경보존'].includes(a),
+    explain: '홍수 예방·자연 경관 보전은 다원적 역할 중 <b>환경 보전</b>입니다(관련 직업: 경관 디자이너). \'생태계 보전\'은 표에 별도 행으로 제시되어 있으므로 오답입니다. 5분류: 환경 보전, 생태계 보전, 지역 사회 유지, 문화 보존, 식량 생산.'
+  }
+};
+
+// ===== 서술형(자기 채점) 정의 =====
+const essays = {
+  q1_2: {
+    ids: ['q1_2a','q1_2b'], pts: 2, resultId: 'r_q1_2',
+    model: '<b>①</b> 작물은 하나의 분류에 고정되는 것이 아니라, 같은 식물이라도 관점이나 활용 목적에 따라 여러 가지로 분류될 수 있는데, 학생은 해바라기가 \'언제나 특용 작물로만\' 분류된다고 고정적으로 생각하는 오개념을 가지고 있다.<br><b>②</b> 해바라기는 기름을 만들기 위해 활용할 때에는 특용 작물로 분류하지만, 꽃다발의 소재로 활용하거나 씨앗을 간식 등의 먹을거리로 활용할 때에는 원예 작물로 분류할 수 있음을 예를 들어 지도한다.',
+    rubric: '① [1점] 분류가 활용 목적·관점에 따라 달라질 수 있음 + 학생이 고정적으로 생각한다는 지적 (두 요소 모두)<br>② [1점] 해바라기의 다른 활용 목적(꽃다발·씨앗 간식 등)과 그때의 분류(원예 작물)를 연결',
+    items: ['① 오개념 진단 (1점)', '② 지도 내용 (1점)']
+  },
+  q1_3: {
+    ids: ['q1_3a','q1_3b'], pts: 2, resultId: 'r_q1_3',
+    model: '<b>①</b> 생명체의 특성이나 기능을 활용하여 인간에게 유용한 물질을 만드는 기술이다.<br><b>②</b> 씨 없는 수박(품종 개량), 마리골드 꽃의 천연 살충제 성분, 은행나무 잎 추출물의 혈액 순환제, 동애등에를 이용한 음식물 쓰레기 처리 등 중 1가지',
+    rubric: '① [1점] (i) 생명체의 특성·기능 활용 + (ii) 인간에게 유용한 물질을 만듦 — 두 요소 모두 포함<br>② [1점] (가)에 제시된 사례(이종 장기·배양육·갈색거저리)를 제외한 타당한 사례. 스마트팜 ICT 등 생명체 활용과 무관한 기술은 0점',
+    items: ['① 생명기술의 의미 (1점)', '② 활용 사례 (1점)']
+  },
+  q2_2: {
+    ids: ['q2_2a','q2_2b'], pts: 2, resultId: 'r_q2_2', autoFirst: true,
+    model: '<b>①</b> ⓑ<br><b>②</b> 물은 흙 표면이 마르기 전에 주어야 하고, 한 번 줄 때 흠뻑 주어야 한다.',
+    rubric: '① [1점] ⓑ (ⓐ는 작은 씨앗의 흩어뿌림으로 올바른 방법) — 자동 채점<br>② [1점] 시기(흙 표면이 마르기 전)와 양(한 번에 흠뻑) <b>모두</b> 포함해야 1점. 1가지만 교정하면 0점. ①이 틀리면 ②도 0점',
+    items: ['② 바르게 고친 내용 (1점)']
+  },
+  q3_2: {
+    ids: ['q3_2'], pts: 2, resultId: 'r_q3_2',
+    model: '친환경 농업과 지속가능한 농업은 같은 것이 아니다. <b>①</b> 친환경 농업은 <b>환경 보호를 우선적으로 고려</b>하는 농업인 반면, <b>②</b> 지속가능한 농업은 환경 보호를 넘어 <b>환경적·경제적·사회적 측면을 균형 있게 고려</b>하는 농업이므로, 두 용어를 구분하지 않고 하나로 묶어 가르치는 것은 적절하지 않다.',
+    rubric: '① [1점] 친환경 농업 = 환경 (보호) 우선<br>② [1점] 지속가능한 농업 = 환경적·경제적·사회적 <b>3측면 모두</b> 언급해야 1점 (2가지 이하는 0점). 두 개념의 관계를 반대로 서술하면 0점',
+    items: ['① 친환경 농업의 측면 (1점)', '② 지속가능한 농업의 3측면 (1점)']
+  }
+};
+
+let graded = false;
+
+function grade() {
+  if (graded) return;
+  const name = document.getElementById('studentName').value.trim();
+  if (!name) { alert('이름을 입력해 주세요.'); document.getElementById('studentName').focus(); return; }
+  if (!confirm('제출하면 답안을 수정할 수 없습니다. 제출할까요?')) return;
+  graded = true;
+
+  let autoScore = 0, autoMax = 0;
+
+  // 단답형 자동 채점
+  for (const [id, def] of Object.entries(shortAnswers)) {
+    autoMax += def.pts;
+    const raw = document.getElementById(id).value;
+    const ok = def.accept(norm(raw));
+    if (ok) autoScore += def.pts;
+    const r = document.getElementById('r_' + id) || document.getElementById('r_' + id.replace(/[ab]$/, ''));
+    showShortResult(id, ok, raw, def);
+  }
+
+  // 문항 2-3은 ①② 두 입력이 한 결과창(r_q2_3) 공유 — 개별 표시 처리
+  renderCombined23();
+
+  // 문항 2-2 ① 기호 자동 채점
+  const symRaw = norm(document.getElementById('q2_2a').value);
+  const symOk = ['ⓑ','b','비','①ⓑ'].includes(symRaw) || symRaw === 'ⓑ';
+  if (symOk) autoScore += 1;
+  autoMax += 1;
+
+  // 서술형 자기 채점 UI 표시
+  for (const [key, def] of Object.entries(essays)) {
+    const box = document.getElementById(def.resultId);
+    let extra = '';
+    if (key === 'q2_2') {
+      extra = '<p>① 기호 자동 채점: ' + (symOk
+        ? '<span class="badge ok">정답 (ⓑ)</span> +1점'
+        : '<span class="badge no">오답</span> — 정답은 <b>ⓑ</b>입니다. ①이 틀리면 ②도 0점으로 자기 채점하세요.') + '</p>';
+    }
+    const checks = def.items.map((label, i) =>
+      `<label><input type="checkbox" class="selfchk" data-pts="1" onchange="updateTotal()"> ${label}</label>`
+    ).join('');
+    box.className = 'result self';
+    box.innerHTML =
+      extra +
+      '<p><span class="badge" style="color:#b7950b;">✍ 자기 채점 문항</span></p>' +
+      '<div class="model"><b>모범답안</b><br>' + def.model + '</div>' +
+      '<div class="rubric"><b>채점 기준</b><br>' + def.rubric + '</div>' +
+      '<div class="selfgrade"><b>내 답안이 기준을 충족하면 체크하세요:</b><br>' + checks + '</div>';
+  }
+
+  // 입력 잠금
+  document.querySelectorAll('input[type=text], textarea').forEach(el => {
+    if (el.id !== 'studentName') el.readOnly = true;
+  });
+  document.getElementById('submitBtn').style.display = 'none';
+
+  window._autoScore = autoScore;
+  updateTotal();
+  document.getElementById('scoreBoard').style.display = 'block';
+  document.getElementById('q1').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showShortResult(id, ok, raw, def) {
+  const box = document.getElementById('r_' + id);
+  if (!box) return;
+  box.className = 'result ' + (ok ? 'ok' : 'no');
+  box.innerHTML =
+    '<span class="badge ' + (ok ? 'ok">✔ 정답' : 'no">✘ 오답') + '</span>' +
+    (ok ? ' (+' + def.pts + '점)' : ' — 정답: <b>' + def.label + '</b>') +
+    '<div class="rubric">' + def.explain + '</div>';
+}
+
+// q2_3: ①②가 각각 입력이지만 결과창은 r_q2_3 하나 → 개별 결과를 합쳐 표시
+function renderCombined23() {
+  const defA = shortAnswers['q2_3a'], defB = shortAnswers['q2_3b'];
+  const okA = defA.accept(norm(document.getElementById('q2_3a').value));
+  const okB = defB.accept(norm(document.getElementById('q2_3b').value));
+  const box = document.getElementById('r_q2_3');
+  box.className = 'result ' + (okA && okB ? 'ok' : 'no');
+  box.innerHTML =
+    '<p>① <span class="badge ' + (okA ? 'ok">✔ 정답' : 'no">✘ 오답') + '</span>' +
+    (okA ? ' (+1점)' : ' — 정답: <b>' + defA.label + '</b>') + '</p>' +
+    '<div class="rubric">' + defA.explain + '</div>' +
+    '<p>② <span class="badge ' + (okB ? 'ok">✔ 정답' : 'no">✘ 오답') + '</span>' +
+    (okB ? ' (+1점)' : ' — 정답: <b>' + defB.label + '</b>') + '</p>' +
+    '<div class="rubric">' + defB.explain + '</div>';
+}
+
+function updateTotal() {
+  const selfPts = Array.from(document.querySelectorAll('.selfchk:checked'))
+    .reduce((s, el) => s + Number(el.dataset.pts), 0);
+  const total = (window._autoScore || 0) + selfPts;
+  const name = document.getElementById('studentName').value.trim();
+  document.getElementById('scoreBoard').textContent =
+    name + ' 님의 점수: ' + total + ' / 14점 (자동 채점 ' + (window._autoScore || 0) + '점 + 자기 채점 ' + selfPts + '점)';
+}
+</script>
+</body>
+</html>
