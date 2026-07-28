@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실과 [6실04-07] 문항 온라인 풀이</title>
+<style>
+  :root {
+    --primary: #2c6e49; --primary-light: #e8f3ed; --accent: #1a5276;
+    --correct: #1e8449; --wrong: #c0392b; --border: #d5dbdb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+    margin: 0; background: #f4f6f6; color: #222; line-height: 1.7;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 16px; }
+  header {
+    background: var(--primary); color: #fff; padding: 28px 20px; text-align: center;
+  }
+  header h1 { margin: 0 0 8px; font-size: 1.5em; }
+  header p { margin: 4px 0; opacity: .9; font-size: .95em; }
+  .card {
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px 24px; margin: 18px 0; box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  }
+  .q-title {
+    font-size: 1.2em; font-weight: bold; color: var(--primary);
+    border-bottom: 2px solid var(--primary); padding-bottom: 8px; margin-bottom: 14px;
+  }
+  .stimulus {
+    background: var(--primary-light); border: 1px solid #bcd9c8;
+    border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: .97em;
+  }
+  .stimulus h4 { margin: 6px 0; color: var(--accent); }
+  .dialog p { margin: 8px 0; }
+  .dialog .spk { font-weight: bold; }
+  u { text-decoration: underline; text-underline-offset: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; background: #fff; }
+  th, td { border: 1px solid #999; padding: 6px 10px; font-size: .93em; text-align: left; }
+  th { background: #eef2f0; }
+  .subq { margin: 18px 0; padding: 14px; border: 1px solid var(--border); border-radius: 8px; }
+  .subq-label { font-weight: bold; margin-bottom: 8px; }
+  .pts { color: var(--accent); font-weight: bold; }
+  input[type=text] {
+    width: 100%; max-width: 420px; padding: 9px 12px; font-size: 1em;
+    border: 1.5px solid #aab; border-radius: 6px; font-family: inherit;
+  }
+  textarea {
+    width: 100%; min-height: 84px; padding: 10px 12px; font-size: 1em;
+    border: 1.5px solid #aab; border-radius: 6px; font-family: inherit; resize: vertical;
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
+  .btn {
+    display: block; margin: 26px auto; padding: 14px 48px; font-size: 1.15em;
+    background: var(--primary); color: #fff; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: bold; font-family: inherit;
+  }
+  .btn:hover { background: #1e5233; }
+  .result { display: none; margin-top: 10px; padding: 12px 14px; border-radius: 8px; font-size: .95em; }
+  .result.ok { display: block; background: #e9f7ef; border: 1px solid var(--correct); }
+  .result.no { display: block; background: #fdedec; border: 1px solid var(--wrong); }
+  .result.self { display: block; background: #fef9e7; border: 1px solid #d4ac0d; }
+  .badge { font-weight: bold; }
+  .badge.ok { color: var(--correct); }
+  .badge.no { color: var(--wrong); }
+  .model { background: #fff; border-left: 4px solid var(--primary); padding: 8px 12px; margin: 8px 0; }
+  .rubric { font-size: .9em; color: #444; margin-top: 6px; }
+  .selfgrade { margin-top: 10px; }
+  .selfgrade label { margin-right: 14px; cursor: pointer; }
+  #scoreBoard {
+    display: none; position: sticky; bottom: 0; background: var(--accent); color: #fff;
+    padding: 14px 20px; text-align: center; font-size: 1.15em; font-weight: bold;
+    box-shadow: 0 -2px 8px rgba(0,0,0,.2);
+  }
+  .note { font-size: .88em; color: #666; }
+  .locked { pointer-events: none; opacity: .75; }
+  #nameBox { text-align: center; }
+  #nameBox input { max-width: 260px; text-align: center; }
+  @media print { .btn, #scoreBoard { display: none !important; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>실과 [6실04-07] 문항</h1>
+  <p>동식물 자원의 분류와 생명기술 · 1문항 · 총 5점</p>
+  <p class="note" style="color:#dfe;">단답형은 자동 채점되며, 서술형은 제출 후 모범답안을 보고 스스로 채점합니다.</p>
+</header>
+
+<div class="container">
+
+<div class="card" id="nameBox">
+  <label><strong>이름</strong> &nbsp;<input type="text" id="studentName" placeholder="이름을 입력하세요"></label>
+</div>
+
+<!-- ===================== 문항 1 (6실04-07) ===================== -->
+<div class="card" id="q4">
+  <div class="q-title">문항 1 [총 5점]</div>
+  <p>(가)는 동식물 자원 단원 수업에서 학생이 작성한 활동지의 일부이고, (나)는 수업 후 교사 협의회 대화의 일부이다. 물음에 답하시오.</p>
+
+  <div class="stimulus">
+    <h4>(가) 학생 활동지 — 활용 목적에 따라 동물 분류하기</h4>
+    <table>
+      <tr><th style="width:18%;">분류</th><th>설명</th><th style="width:24%;">내가 찾은 예</th></tr>
+      <tr><td>애완동물</td><td>가족처럼 애정을 가지고 기르는 동물</td><td>개, 고양이, 금붕어</td></tr>
+      <tr><td>경제동물</td><td>먹을거리나 생활용품 등 경제적 이익을 위해 기르는 동물</td><td>소, 돼지, 닭</td></tr>
+      <tr><td style="text-align:center;">( ㉠ )</td><td>안내, 탐지, 실험 등과 같이 일정한 목적을 수행하도록 기르는 동물</td><td>안내견, 실험용 쥐</td></tr>
+    </table>
+    <p>▷ 활동지 아래에 학생이 쓴 생각: ⓐ <u>"토끼는 귀엽고 집에서 기르는 동물이니까 언제나 애완동물로만 분류해야 한다."</u></p>
+  </div>
+
+  <div class="stimulus dialog">
+    <h4>(나) 교사 협의회 대화</h4>
+    <p><span class="spk">이 교사:</span> 학생들이 동물 분류 활동은 재미있어했는데, ⓐ와 같이 생각하는 학생이 여럿 있었어요. 다음 차시에 짚어 주려고 해요.</p>
+    <p><span class="spk">한 교사:</span> 좋네요. 그리고 이 성취기준은 분류에서 끝나지 않고 관련된 다양한 생명기술을 탐색하는 것까지 이어지잖아요. 저는 식용 곤충인 갈색거저리 애벌레가 미래 식량 자원으로 주목받고 있다는 사례를 소개하려고 해요. ⓑ <u>연구 기관에서 기존의 갈색거저리보다 더 크고 고소한 특징을 지니도록 만든 새로운 갈색거저리를 농가에 보급하고 있다</u>는 기사도 함께 보여 주면, 생명기술이 어떻게 활용되는지 이해하는 데 도움이 될 것 같아요.</p>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">1) (가)의 괄호 ㉠에 들어갈 동물 자원의 분류 명칭을 쓰시오. <span class="pts">[1점]</span></div>
+    <input type="text" id="q4_1" placeholder="답을 입력하세요" autocomplete="off">
+    <div class="result" id="r_q4_1"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">2) (가)의 밑줄 친 ⓐ에 나타난 학생 생각의 문제점을 ① 동물 자원 분류의 관점에서 쓰고, ② 토끼를 예로 들어 이를 바로잡기 위한 지도 내용을 1가지 서술하시오. <span class="pts">[2점]</span></div>
+    <p class="note">①</p>
+    <textarea id="q4_2a" placeholder="학생 생각의 문제점을 동물 자원 분류의 관점에서 서술하세요"></textarea>
+    <p class="note">②</p>
+    <textarea id="q4_2b" placeholder="토끼를 예로 든 지도 내용을 서술하세요"></textarea>
+    <div class="result" id="r_q4_2"></div>
+  </div>
+
+  <div class="subq">
+    <div class="subq-label">3) (나)의 밑줄 친 ⓑ에 대하여 ① ⓑ가 동식물 자원과 관련된 생명기술의 활용 중 어디에 해당하는지 쓰고, ② 갈색거저리 애벌레가 미래 식량 자원으로 주목받는 까닭을 1가지 서술하시오. <span class="pts">[2점]</span></div>
+    <p class="note">①</p>
+    <input type="text" id="q4_3a" placeholder="생명기술의 활용 중 어디에 해당하는지 쓰세요" autocomplete="off">
+    <div class="result" id="r_q4_3a"></div>
+    <p class="note">②</p>
+    <textarea id="q4_3b" placeholder="미래 식량 자원으로 주목받는 까닭을 1가지 서술하세요"></textarea>
+    <div class="result" id="r_q4_3b"></div>
+  </div>
+</div>
+
+<button class="btn" id="submitBtn" onclick="grade()">제출하고 채점하기</button>
+
+<p style="text-align:center;"><a href="../" style="color:var(--accent);">← 전체 문항(8문항) 풀이 페이지로</a></p>
+
+</div><!-- container -->
+
+<div id="scoreBoard"></div>
+
+<script>
+'use strict';
+
+// 정규화: 공백·괄호 안 내용·중점 제거, 소문자화
+function norm(s) {
+  return (s || '').toLowerCase()
+    .replace(/\([^)]*\)/g, '')
+    .replace(/[\s·・,\.]/g, '')
+    .trim();
+}
+function includesAny(text, words) { return words.some(w => text.includes(w)); }
+
+// ===== 단답형 자동 채점 정의 =====
+const shortAnswers = {
+  q4_1: {
+    pts: 1, label: '특수동물',
+    accept: a => ['특수동물'].includes(a),
+    explain: '활용 목적에 따른 동물 자원의 3분류: 애완동물, 경제동물, <b>특수동물</b>. 안내·탐지·실험 등 특수한(일정한) 목적을 수행하도록 기르는 동물입니다. \'사역동물\', \'도우미동물\', \'실험동물\' 등은 오답입니다(실험동물은 특수동물의 하위 예시).'
+  },
+  q4_3a: {
+    pts: 1, label: '품종 개량(새로운 품종 개발)',
+    accept: a => a.includes('품종') && (a.includes('개량') || a.includes('개발')),
+    explain: 'ⓑ는 기존 개체보다 개선된 특징(더 크고 고소함)을 지닌 새로운 갈색거저리를 만들어 보급하는 사례이므로, 생명기술 활용 5범주 중 <b>품종 개량(새로운 품종 개발)</b>에 해당합니다. 5범주: 품종 개량·개발, 대량 생산, 멸종 위기 동물 보전, 질병 예방·치료, 환경·에너지 문제 해결. \'대량 생산\' 등 다른 범주는 오답입니다.'
+  }
+};
+
+// ===== 서술형(자기 채점) 정의 =====
+const essays = {
+  q4_2: {
+    ids: ['q4_2a','q4_2b'], pts: 2, resultId: 'r_q4_2',
+    model: '<b>①</b> 동물은 하나의 분류에 고정되는 것이 아니라, 같은 동물이라도 관점이나 활용 목적에 따라 여러 가지로 분류될 수 있는데, 학생은 토끼가 \'언제나 애완동물로만\' 분류된다고 고정적으로 생각하고 있다.<br><b>②</b> 토끼는 정서적 교감을 나누며 함께 생활하면 반려동물(애완동물)로, 털을 이용하면 경제동물로, 실험동물의 역할을 할 때에는 특수동물로 분류할 수 있음을 예를 들어 지도한다.',
+    rubric: '① [1점] (i) 동물 분류는 활용 목적(관점)에 따라 달라질 수 있다는 분류 원리 + (ii) 학생이 이를 고정적·단일하게 생각한다는 오류 지적 — 두 요소 모두<br>② [1점] 토끼의 다른 활용 목적과 그때의 분류를 1가지 이상 연결(털 이용→경제동물, 실험→특수동물). 목적은 맞으나 분류 명칭이 틀리면 0점, 토끼가 아닌 다른 동물의 예는 0점',
+    items: ['① 오개념 진단 (1점)', '② 지도 내용 (1점)']
+  },
+  q4_3: {
+    ids: ['q4_3b'], pts: 1, resultId: 'r_q4_3b',
+    model: '<b>②</b> 단백질 등 영양소가 풍부하기 때문이다. (또는: 가축 사육에 비해 사료·물이 적게 들고 탄소 배출이 적어 환경 부담이 작기 때문이다.)',
+    rubric: '② [1점] (i) 고단백 등 영양적 가치 또는 (ii) 사육 자원·탄소 배출이 적은 환경적 가치 중 1가지. "맛있어서", "인기가 많아서" 등 근거 없는 서술은 0점',
+    items: ['② 미래 식량 자원으로 주목받는 까닭 (1점)']
+  }
+};
+
+let graded = false;
+
+function grade() {
+  if (graded) return;
+  const name = document.getElementById('studentName').value.trim();
+  if (!name) { alert('이름을 입력해 주세요.'); document.getElementById('studentName').focus(); return; }
+  if (!confirm('제출하면 답안을 수정할 수 없습니다. 제출할까요?')) return;
+  graded = true;
+
+  let autoScore = 0;
+
+  // 단답형 자동 채점
+  for (const [id, def] of Object.entries(shortAnswers)) {
+    const raw = document.getElementById(id).value;
+    const ok = def.accept(norm(raw));
+    if (ok) autoScore += def.pts;
+    showShortResult(id, ok, raw, def);
+  }
+
+  // 서술형 자기 채점 UI 표시
+  for (const [key, def] of Object.entries(essays)) {
+    const box = document.getElementById(def.resultId);
+    const checks = def.items.map((label, i) =>
+      `<label><input type="checkbox" class="selfchk" data-pts="1" onchange="updateTotal()"> ${label}</label>`
+    ).join('');
+    box.className = 'result self';
+    box.innerHTML =
+      '<p><span class="badge" style="color:#b7950b;">✍ 자기 채점 문항</span></p>' +
+      '<div class="model"><b>모범답안</b><br>' + def.model + '</div>' +
+      '<div class="rubric"><b>채점 기준</b><br>' + def.rubric + '</div>' +
+      '<div class="selfgrade"><b>내 답안이 기준을 충족하면 체크하세요:</b><br>' + checks + '</div>';
+  }
+
+  // 입력 잠금
+  document.querySelectorAll('input[type=text], textarea').forEach(el => {
+    if (el.id !== 'studentName') el.readOnly = true;
+  });
+  document.getElementById('submitBtn').style.display = 'none';
+
+  window._autoScore = autoScore;
+  updateTotal();
+  document.getElementById('scoreBoard').style.display = 'block';
+  document.getElementById('q4').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showShortResult(id, ok, raw, def) {
+  const box = document.getElementById('r_' + id);
+  if (!box) return;
+  box.className = 'result ' + (ok ? 'ok' : 'no');
+  box.innerHTML =
+    '<span class="badge ' + (ok ? 'ok">✔ 정답' : 'no">✘ 오답') + '</span>' +
+    (ok ? ' (+' + def.pts + '점)' : ' — 정답: <b>' + def.label + '</b>') +
+    '<div class="rubric">' + def.explain + '</div>';
+}
+
+function updateTotal() {
+  const selfPts = Array.from(document.querySelectorAll('.selfchk:checked'))
+    .reduce((s, el) => s + Number(el.dataset.pts), 0);
+  const total = (window._autoScore || 0) + selfPts;
+  const name = document.getElementById('studentName').value.trim();
+  document.getElementById('scoreBoard').textContent =
+    name + ' 님의 점수: ' + total + ' / 5점 (자동 채점 ' + (window._autoScore || 0) + '점 + 자기 채점 ' + selfPts + '점)';
+}
+</script>
+</body>
+</html>
