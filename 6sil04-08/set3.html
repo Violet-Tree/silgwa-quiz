@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실과 [6실04-08] 세트 3</title>
+<style>
+:root { --primary: #2c6e49; --primary-light: #e8f3ed; --accent: #1a5276; --border: #d5dbdb; }
+* { box-sizing: border-box; }
+body { font-family: "Malgun Gothic","맑은 고딕",sans-serif; margin:0; background:#f4f6f6; color:#222; line-height:1.7; }
+.container { max-width:860px; margin:0 auto; padding:16px; }
+header { background:var(--primary); color:#fff; padding:28px 20px; text-align:center; }
+header h1 { margin:0 0 8px; font-size:1.5em; }
+header p { margin:4px 0; opacity:.9; font-size:.95em; }
+.tabs { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0; }
+.tabs a {
+  padding:10px 18px; background:#fff; border:1.5px solid var(--border); border-radius:8px;
+  text-decoration:none; color:var(--accent); font-weight:bold; font-size:.95em;
+}
+.tabs a.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.tabs a:hover { background:var(--primary-light); }
+.card { background:#fff; border:1px solid var(--border); border-radius:10px; padding:20px 24px; margin:18px 0; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+.md-content h1 { font-size:1.3em; color:var(--primary); border-bottom:2px solid var(--primary); padding-bottom:8px; }
+.md-content h2 { font-size:1.15em; color:var(--accent); margin-top:24px; }
+.md-content h3 { font-size:1.05em; }
+.md-content table { border-collapse:collapse; width:100%; margin:8px 0; }
+.md-content th, .md-content td { border:1px solid #999; padding:6px 10px; font-size:.93em; text-align:left; }
+.md-content th { background:#eef2f0; }
+.md-content blockquote { border-left:3px solid #999; margin-left:0; padding-left:12px; color:#444; background:var(--primary-light); border-radius:0 8px 8px 0; padding:12px 16px; }
+.md-content hr { border:none; border-top:1px solid #ccc; margin:20px 0; }
+.md-content strong { color:#1a3a2a; }
+.md-content u { text-underline-offset:3px; }
+.answer-section { display:none; margin-top:20px; padding:20px; background:#fef9e7; border:2px solid #d4ac0d; border-radius:10px; }
+.answer-section.show { display:block; }
+.toggle-btn {
+  display:block; margin:20px auto; padding:14px 48px; font-size:1.1em;
+  background:var(--accent); color:#fff; border:none; border-radius:8px;
+  cursor:pointer; font-weight:bold; font-family:inherit;
+}
+.toggle-btn:hover { background:#154360; }
+.note { font-size:.88em; color:#666; text-align:center; }
+a.back { display:block; text-align:center; margin:16px 0; color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>실과 [6실04-08] 세트 3</h1>
+  <p>동식물 기르기와 생태 존중 · 세트 3</p>
+  <p class="note" style="color:#dfe;">세트를 선택하여 문항을 풀어 보세요. 정답은 하단 버튼으로 확인합니다.</p>
+</header>
+<div class="container">
+<div class="tabs"><a href="index.html">세트 1 (대화형)</a><a href="set2.html">세트 2</a><a href="set3.html" class="active">세트 3</a><a href="set4.html">세트 4</a></div>
+<div class="card md-content">
+<h1>세트 3 [총 5점] — 식물이 자라는 환경 조건과 텃밭 관리</h1>
+<p>(가)는 학교 텃밭 가꾸기 수업을 준비하는 교사 협의회 대화의 일부이고, (나)는 수업 후 학생이 작성한 텃밭 관찰 일지의 일부이다. 물음에 답하시오. [5점]</p>
+<hr />
+<p><strong>(가) 교사 협의회 대화</strong></p>
+<blockquote>
+<p><strong>김 교사</strong>: 텃밭 가꾸기 활동 전에 식물이 자라는 데 알맞은 환경 조건을 먼저 다루려고 해요. 햇빛이나 수분은 학생들이 잘 알고 있는데, 다른 조건들은 그 역할을 잘 설명하지 못하더라고요.</p>
+<p><strong>박 교사</strong>: 맞아요. 특히 ( ㉠ )은/는 학생들이 단순히 식물을 지탱하는 토대로만 생각하기 쉬운데, 실제로는 식물에게 수분과 양분을 공급하고 뿌리의 호흡에 필요한 공기까지 제공하는 복합적인 역할을 하지요.</p>
+<p><strong>김 교사</strong>: 그렇군요. 그리고 방울토마토는 앞으로 키가 크게 자라고 열매가 달리면 쓰러지기 쉬우니 ( ㉡ )이/가 필요하고, 원줄기와 열매가 잘 자라도록 ⓑ <u>곁순 따기</u>도 해 주어야 한다고 지도하려고 해요.</p>
+</blockquote>
+<p><strong>(나) 학생의 텃밭 관찰 일지</strong></p>
+<blockquote>
+<p>○월 ○일: 지난주에 뿌린 씨앗에서 싹이 났다. 싹이 한곳에 너무 빽빽하게 나서 선생님께서 간격을 두고 솎아 주자고 하셨다. ⓐ <u>어떤 싹을 뽑을지 고민하다가, 둘레의 다른 싹들보다 키가 훌쩍 크게 자란 싹이 튼튼해 보여서 그 싹들만 남기고 나머지를 모두 뽑았다.</u></p>
+<p>○월 ○일: 방울토마토 모종이 많이 자랐다. 선생님께서 다음 시간에 해야 할 관리 활동을 알려 주셨다.</p>
+</blockquote>
+<hr />
+<p><strong>하위 문항</strong></p>
+<p>1) (가)의 괄호 ㉠에 들어갈 말을 쓰시오. [1점]</p>
+<p>2) (나)의 밑줄 친 ⓐ에서 학생의 판단이 잘못된 까닭을 ① 서술하고, ② 솎아 줄 때 우선하여 뽑아야 하는 것을 ⓐ에 나타난 것 외에 2가지 쓰시오. [2점]</p>
+<p>3) (가)에서 ① 괄호 ㉡에 들어갈 식물 관리 활동을 쓰고, ② 밑줄 친 ⓑ를 하는 까닭을 영양분과 관련지어 서술하시오. [2점]</p>
+<hr />
+<p><strong>연계 성취기준</strong>: [6실04-08] — 내용 체계(5~6학년): 지식·이해 '생활 속 동식물의 이해' / 과정·기능 '동식물을 기르고 가꾸기' / 가치·태도 '동식물에 대한 생태존중감을 갖는 태도'</p>
+<p><strong>출제 의도</strong>
+- 1): 식물이 자라는 환경 조건 5가지 중 '토양'의 복합적 기능(지탱+수분·양분 공급+뿌리 호흡용 공기 제공) 이해 확인 — 각론 해설의 임용 포인트("토양은 단순 지지체가 아니라 수분·양분·공기 3가지를 제공하는 복합 기능")를 그대로 빈칸 단서로 구성. v2 문항 2에서 환경 조건 5가지는 자료(도입 활동)로만 나열되었고 정답으로 쓰인 적 없음
+- 2): 솎아주기의 의미(간격 유지→튼튼한 성장)와 판단 기준(제거 대상: 잎 모양 나쁜 것, 웃자란 것, 병해충 피해)의 적용 평가 — 학생이 '웃자란 싹'을 튼튼한 것으로 오인하여 남긴 오류를 진단하고, 나머지 제거 기준 2가지를 인출하는 진단·처방 이원 구조(기출 템플릿 4 계열)
+- 3): 식물 관리 7가지 중 지지대 세우기(용어)와 곁순 따기(원리)의 짝 확인 — 곁순 따기의 까닭(영양분이 곁순으로 분산되는 것을 막아 원줄기·잎·열매 성장에 집중)을 "영양분과 관련지어" 조건으로 지정하여 채점 기준 명확화</p>
+<p><strong>활용 기출 템플릿</strong>: 템플릿 1(교사 협의회 대화 + 빈칸 용어) + 템플릿 4(학생 산출물 오류 진단→처방) + 자료 유형 ①(협의회 대화)·④/⑥(학생 관찰 일지). 배점 구조 1+2+2.</p>
+<p><strong>정답 노출 점검</strong>
+- 1) ㉠: 대화·일지 어디에도 '토양'·'흙'이라는 표현을 쓰지 않음(일지의 파종 서술도 '뿌린 씨앗'으로 처리) — 기능 서술만으로 용어를 인출해야 함
+- 2): 발문이 "학생의 판단이 잘못된 까닭"으로 중립화되어 있고, ⓐ 문장 자체에 '웃자람'이라는 용어가 없음("키가 훌쩍 크게 자란"으로 서술) — 학생 행동의 어느 부분이 왜 잘못인지(웃자란 것은 남길 대상이 아니라 제거 대상)를 스스로 판별해야 함. ②의 나머지 기준 2가지(잎 모양 나쁜 것, 병해충 피해)는 자료에 미제시
+- 3): ㉡의 의미 단서("키가 크게 자라고 열매가 달리면 쓰러지기 쉬우니")는 기출 표준의 빈칸 단서 방식이며, '지지대'라는 낱말은 자료 어디에도 없음. ⓑ의 까닭(영양분 분산 방지)도 자료에 미제시 — 대화의 "원줄기와 열매가 잘 자라도록"은 목적(결과)만 제시하고 원리(영양분 집중)는 답안에서 요구
+- 세트 간 중복 점검: '웃자란 것'은 세트 2에서 좋은 모종 조건의 허용 답안(비모범답안)으로만 쓰였고, 본 세트 2)②의 정답 기준 2가지(잎 모양·병해충)에서는 제외("ⓐ에 나타난 것 외에" 조건)하여 정답 용어 중복을 차단</p>
+<hr />
+</div>
+<button class="toggle-btn" onclick="toggleAnswer()">정답 및 채점기준 보기</button>
+<div class="answer-section md-content" id="answerSection">
+<h2>세트 3 모범답안 및 채점기준표</h2>
+<h3>1) ㉠ 빈칸 [1점]</h3>
+<p><strong>모범답안</strong>: <strong>토양</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>배점</td>
+<td>1점 (부분점수 없음)</td>
+</tr>
+<tr>
+<td>필수 채점 요소</td>
+<td>환경 조건 용어 '토양'</td>
+</tr>
+<tr>
+<td>허용 답안 범위</td>
+<td>토양, 흙 (각론 표의 용어는 '토양'이나, 발문에 원문 용어 지정 단서가 없으므로 일상어 '흙'도 동일 지시 대상으로 인정)</td>
+</tr>
+<tr>
+<td>오답 처리 기준</td>
+<td>· '땅', '배양토', '거름' → 0점 (환경 조건 5가지의 항목 용어가 아니거나 다른 개념)<br>· '수분', '공기' → 0점 (토양이 공급하는 요소이지 빈칸의 조건 자체가 아님 — 자료 문장이 "수분과 양분을 공급하고 ~ 공기까지 제공"이라 서술하므로 이들은 빈칸이 될 수 없음)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>출제 근거</strong>: 실과 각론 자료(<code>6실04-08/01_교육과정근거.md</code> §5) 환경 조건 표: "토양 — 식물을 지탱하는 토대, 수분과 양분 공급, 뿌리 호흡을 위한 공기 제공" / <code>6실04-08/03_상세해설.md</code> §2 임용 포인트: "'토양'은 단순 지지체가 아니라 수분·양분·공기 3가지를 제공하는 복합적 기능을 가짐"</p>
+<h3>2) ⓐ 솎아주기 판단 오류 진단 [2점 = ①1점 + ②1점]</h3>
+<p><strong>모범답안</strong></p>
+<blockquote>
+<p><strong>①</strong> 둘레의 싹보다 키가 훌쩍 크게 자란 것은 튼튼한 것이 아니라 웃자란 것이므로, 남길 대상이 아니라 솎아서 뽑아야 할 대상이다. (학생은 뽑아야 할 웃자란 싹만 남기고 정상적인 싹을 뽑았다.)</p>
+<p><strong>②</strong> 잎 모양이 나쁜 것, 병해충 피해를 입은 것</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>배점</td>
+<td>2점 (①·② 각 1점 — ①·②는 독립 채점)</td>
+</tr>
+<tr>
+<td>① 필수 채점 요소</td>
+<td>(i) 키가 유난히 크게 자란 것은 <strong>웃자란 것</strong>이라는 판별 + (ii) 웃자란 것은 남길 것이 아니라 <strong>제거(솎음) 대상</strong>이라는 지적 — 두 요소의 취지가 모두 드러나야 1점</td>
+</tr>
+<tr>
+<td>① 허용 답안 범위</td>
+<td>"키만 웃자란 싹은 약하므로 뽑아야 하는데 학생은 오히려 그것만 남겼다" 등 동치 표현. '웃자람'이라는 용어 없이도 "키만 지나치게 자란 것은 튼튼한 것이 아니어서 솎아낼 대상"이라는 취지가 정확하면 인정</td>
+</tr>
+<tr>
+<td>② 필수 채점 요소</td>
+<td>다음 2가지 <strong>모두</strong> 기재 시 1점: (i) <strong>잎 모양이 나쁜 것</strong> (ii) <strong>병해충 피해를 입은 것</strong></td>
+</tr>
+<tr>
+<td>② 허용 답안 범위</td>
+<td>"잎이 상하거나 모양이 좋지 않은 것", "병에 걸리거나 벌레 피해를 입은 것" 등 동치 표현</td>
+</tr>
+<tr>
+<td>오답 처리 기준</td>
+<td>· ①에서 "간격을 잘못 맞췄다" 등 웃자람 판별과 무관한 지적만 한 경우 → 0점<br>· ②에서 1가지만 기재 → 0점 (발문에 "2가지" 수량 지정)<br>· ②에서 '웃자란 것'을 다시 기재 → 발문 조건("ⓐ에 나타난 것 외에") 위반으로 해당 요소 불인정<br>· ②에서 "키가 작은 것", "싹이 늦게 난 것" 등 근거 자료에 없는 기준 → 해당 요소 0점</td>
+</tr>
+</tbody>
+</table>
+<p><strong>출제 근거</strong>
+- 실과 각론 자료(<code>6실04-08/01_교육과정근거.md</code> §5): "솎아주기 — 식물이 더 튼튼하게 자라도록 간격을 유지하여 솎아낸다" / <code>6실04-08/03_상세해설.md</code> §4: "밀집 시 경쟁으로 약해지므로 간격 확보 → 튼튼한 성장"
+- 웹수집 근거(<code>6실04-08/04_웹수집자료.md</code> 분류 1-1, 세종시 텃밭 가꾸기 가이드): "솎아주기 기준: <strong>잎 모양 나쁘거나 웃자란 것, 병해충 피해</strong> 순으로 제거" — 동 자료의 '출제 활용 포인트'에서 단답형 출제 가능 소재로 명시</p>
+<h3>3) ㉡ 관리 활동 용어와 ⓑ 곁순 따기의 까닭 [2점 = ①1점 + ②1점]</h3>
+<p><strong>모범답안</strong></p>
+<blockquote>
+<p><strong>①</strong> 지지대 세우기</p>
+<p><strong>②</strong> 영양분이 곁순으로 분산되는 것을 막아 원줄기와 잎, 열매의 성장에 영양분이 집중되도록 하기 위해서이다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>배점</td>
+<td>2점 (①·② 각 1점 — 독립 채점)</td>
+</tr>
+<tr>
+<td>① 필수 채점 요소</td>
+<td>식물 관리 활동 용어 '지지대 세우기'</td>
+</tr>
+<tr>
+<td>① 허용 답안 범위</td>
+<td>"지지대 세우기", "지지대를 세운다", "지주 세우기" (동일 지시 대상)</td>
+</tr>
+<tr>
+<td>② 필수 채점 요소</td>
+<td>(i) 영양분이 곁순으로 <strong>분산되는 것을 막음</strong> + (ii) 원줄기(주줄기)·잎·열매의 <strong>성장에 집중</strong> — 발문 조건 "영양분과 관련지어"에 따라 (i)의 취지가 반드시 포함되어야 1점</td>
+</tr>
+<tr>
+<td>② 허용 답안 범위</td>
+<td>"곁순이 영양분을 가져가지 않게 하여 열매가 잘 자라도록", "양분이 곁가지로 나뉘지 않고 줄기와 열매로 가도록" 등 동치 표현</td>
+</tr>
+<tr>
+<td>오답 처리 기준</td>
+<td>· ①에서 '곁순 따기', '순지르기', '가지치기' → 0점 (ⓑ와 동일하거나 각론에 없는 용어)<br>· ①에서 "막대 세우기", "끈으로 묶기" 등 용어가 아닌 행위 서술 → 0점 (관리 활동의 명칭 요구)<br>· ②에서 "열매가 잘 자라게 하려고" 등 결과만 쓰고 영양분 분산 방지의 원리가 없는 답 → 발문 조건 미충족으로 0점<br>· ②에서 "바람이 잘 통하게 하려고", "햇빛을 잘 받게 하려고" 등 각론 근거에 없는 까닭 → 0점</td>
+</tr>
+</tbody>
+</table>
+<p><strong>출제 근거</strong>
+- 실과 각론 자료(<code>6실04-08/01_교육과정근거.md</code> §5): "지지대 세우기 — 식물이 넘어지지 않도록 지지대를 세운다" / "곁순 따기 — 줄기, 잎, 열매가 잘 자라도록 곁순을 따준다"
+- <code>6실04-08/03_상세해설.md</code> §4: "지지대 세우기 — 무거운 열매나 줄기가 넘어지는 것 방지" / "곁순 따기 — <strong>영양분이 곁순으로 분산되는 것 막아 주줄기·열매 성장 집중</strong>"
+- 방울토마토는 교과서 9종이 채택한 대표 체험 식물(각론 p.90, <code>6실04-08/01_교육과정근거.md</code> §5)로 소재의 교육과정 적합성 확보</p>
+<hr />
+</div>
+<a class="back" href="../">← 전체 문항 페이지로</a>
+</div>
+<script>
+function toggleAnswer() {
+  const sec = document.getElementById('answerSection');
+  const btn = event.target;
+  if (sec.classList.contains('show')) {
+    sec.classList.remove('show');
+    btn.textContent = '정답 및 채점기준 보기';
+  } else {
+    sec.classList.add('show');
+    btn.textContent = '정답 숨기기';
+    sec.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
+</body>
+</html>

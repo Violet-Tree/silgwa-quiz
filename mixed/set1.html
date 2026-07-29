@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>혼합 세트 1</title>
+<style>
+:root { --primary: #2c6e49; --primary-light: #e8f3ed; --accent: #1a5276; --border: #d5dbdb; }
+* { box-sizing: border-box; }
+body { font-family: "Malgun Gothic","맑은 고딕",sans-serif; margin:0; background:#f4f6f6; color:#222; line-height:1.7; }
+.container { max-width:860px; margin:0 auto; padding:16px; }
+header { background:var(--primary); color:#fff; padding:28px 20px; text-align:center; }
+header h1 { margin:0 0 8px; font-size:1.5em; }
+header p { margin:4px 0; opacity:.9; font-size:.95em; }
+.tabs { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0; }
+.tabs a {
+  padding:10px 18px; background:#fff; border:1.5px solid var(--border); border-radius:8px;
+  text-decoration:none; color:var(--accent); font-weight:bold; font-size:.95em;
+}
+.tabs a.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.tabs a:hover { background:var(--primary-light); }
+.card { background:#fff; border:1px solid var(--border); border-radius:10px; padding:20px 24px; margin:18px 0; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+.md-content h1 { font-size:1.3em; color:var(--primary); border-bottom:2px solid var(--primary); padding-bottom:8px; }
+.md-content h2 { font-size:1.15em; color:var(--accent); margin-top:24px; }
+.md-content h3 { font-size:1.05em; }
+.md-content table { border-collapse:collapse; width:100%; margin:8px 0; }
+.md-content th, .md-content td { border:1px solid #999; padding:6px 10px; font-size:.93em; text-align:left; }
+.md-content th { background:#eef2f0; }
+.md-content blockquote { border-left:3px solid #999; margin-left:0; padding-left:12px; color:#444; background:var(--primary-light); border-radius:0 8px 8px 0; padding:12px 16px; }
+.md-content hr { border:none; border-top:1px solid #ccc; margin:20px 0; }
+.md-content strong { color:#1a3a2a; }
+.md-content u { text-underline-offset:3px; }
+.answer-section { display:none; margin-top:20px; padding:20px; background:#fef9e7; border:2px solid #d4ac0d; border-radius:10px; }
+.answer-section.show { display:block; }
+.toggle-btn {
+  display:block; margin:20px auto; padding:14px 48px; font-size:1.1em;
+  background:var(--accent); color:#fff; border:none; border-radius:8px;
+  cursor:pointer; font-weight:bold; font-family:inherit;
+}
+.toggle-btn:hover { background:#154360; }
+.note { font-size:.88em; color:#666; text-align:center; }
+a.back { display:block; text-align:center; margin:16px 0; color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>혼합 세트 1</h1>
+  <p>[6실04-07]+[6실04-10]</p>
+  <p class="note" style="color:#dfe;">세트를 선택하여 문항을 풀어 보세요. 정답은 하단 버튼으로 확인합니다.</p>
+</header>
+<div class="container">
+<div class="tabs"><a href="set1.html" class="active">혼합 세트 1 [07+10]</a><a href="set2.html">혼합 세트 2 [08+11]</a><a href="set3.html">혼합 세트 3 [09+07+11]</a></div>
+<div class="card md-content">
+<h1>혼합 세트 1 [6실04-07 + 6실04-10] [총 5점]</h1>
+<p>(가)는 [6실04-07]과 [6실04-10] 성취기준을 연계한 수업을 준비하는 교사 협의회 대화의 일부이고, (나)는 이 수업에서 한 학생이 작성한 식물 분류 활동지의 일부이다. 물음에 답하시오. [5점]</p>
+<hr />
+<p><strong>(가) 교사 협의회 대화</strong></p>
+<blockquote>
+<p><strong>김 교사</strong>: [6실04-10] 수업에서 학교 건물 옥상에 만든 텃밭에서 채소를 기르는 체험을 하려고 해요. 학교의 토지나 건축물 등을 활용하여 도시농업을 하는 것은 「도시농업의 육성 및 지원에 관한 법률」에서 ( ㉠ ) 도시농업으로 분류하고 있더라고요.</p>
+<p><strong>박 교사</strong>: 좋아요. 이 체험을 [6실04-07] 수업과 연계하여, 텃밭에서 기르는 식물이 활용 목적에 따라 어떻게 분류되는지도 알아보게 하면 좋겠어요. (나)에서 한 학생이 분류한 것을 보니 다시 지도해야 할 부분이 있네요.</p>
+<p><strong>김 교사</strong>: 그리고 생명기술 탐색도 함께 하려고 해요. 생명기술은 ( ㉡ )의 특성이나 기능을 활용하여 인간에게 유용한 물질을 만드는 기술인데, 사례 중 하나로 ㉢ <u>동물 줄기세포를 실험실에서 배양하여 만든 인조 고기</u>를 소개하면 학생들이 생명기술의 가능성에 흥미를 느낄 것 같아요.</p>
+</blockquote>
+<p><strong>(나) 학생의 식물 분류 활동지</strong></p>
+<blockquote>
+<p>◎ 학교 텃밭에서 기르는 식물을 활용 목적에 따라 분류해 봅시다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>기호</th>
+<th>기르는 식물</th>
+<th>활용 목적</th>
+<th>분류</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ⓐ</td>
+<td>방울토마토</td>
+<td>반찬(부식)으로 먹으려고 기른다.</td>
+<td>원예 작물</td>
+</tr>
+<tr>
+<td>ⓑ</td>
+<td>옥수수</td>
+<td>학교에서 기르는 소에게 먹이려고 기른다.</td>
+<td>식량 작물</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>하위 문항</strong></p>
+<p>1) (가)의 괄호 ㉠에 들어갈 도시농업의 유형을 「도시농업의 육성 및 지원에 관한 법률」에 제시된 용어로 쓰시오. [1점]</p>
+<p>2) (나)의 ⓐ~ⓑ 중 분류가 적절하지 <u>않은</u> 것을 찾아 ① 기호를 쓰고, ② 올바른 분류 명칭을 쓰고 그렇게 분류해야 하는 이유를 활용 목적과 관련지어 서술하시오. [2점]</p>
+<p>3) (가)에 대하여 ① 괄호 ㉡에 들어갈 말을 쓰고, ② 밑줄 친 ㉢에 해당하는 생명기술 사례의 이름을 쓰시오. [2점]</p>
+<hr />
+<p><strong>연계 성취기준</strong>: [6실04-07] + [6실04-10]</p>
+<p><strong>출제 의도</strong>
+- 1): [10] 도시농업법 5유형 중 '학교교육형'의 인출. 법률 원문에서 "학교의 토지나 건축물 등을 활용한 도시농업"이 학교교육형에 해당. 자료에 '학교', '교육' 표현을 쓰지 않은 것이 아니라 '학교 건물 옥상'이라고 했으나 '학교교육형'이라는 법정 명칭은 미등장. 기존 [10] 세트 1의 '도심형', 세트 2의 '근린생활권형'과 다른 유형.
+- 2): [07] 각론의 식물 자원(작물) 5분류에서 사료 작물의 정의("가축에게 먹이기 위해 재배") 확인. 학생은 ⓑ를 '식량 작물'로 분류했으나, 옥수수를 '소에게 먹이려고' 기르는 것이므로 사료 작물이 적절함. 식량 작물은 '인간의 주요 식량(주식)을 얻기 위해' 재배하는 것. 기존 [07] 세트 2의 '식량 작물'·세트 4의 '특용 작물'과 다른 분류.
+- 3): [07] 각론의 생명기술 정의("<strong>생명체</strong>의 특성이나 기능을 활용하여 인간에게 유용한 물질을 만드는 기술")에서 핵심 용어 '생명체' 인출 + 생명기술 사례 표의 '배양육' 인출. 밑줄의 서술("동물 줄기세포를 실험실에서 배양하여 만든 인조 고기")은 각론 원문("동물 줄기세포를 배양하여 만드는 인조 고기")과 일치. 자료에 '배양'이라는 단어는 등장하지만 사례명 '배양육'은 미등장.</p>
+<p><strong>정답 노출 검증</strong>
+- ㉠: 자료에 '학교교육형' 미등장. '학교 건물 옥상'이라는 장소 서술은 법정 유형명을 직접 노출하지 않음.
+- 2): 자료에 '사료' 미등장. 활용 목적 서술("소에게 먹이려고")만 제시.
+- ㉡: 자료에 '생명체' 미등장(정의 문장에서 빈칸 처리). ㉢: '배양육' 미등장(서술적 풀이만 제시).</p>
+<p><strong>활용 기출 템플릿</strong>: 템플릿 1(교사 협의회 대화) + 템플릿 4(학생 산출물 오류 진단) + 자료유형 ⑥(학생 활동지). 배점 구조 1+2+2(5점형).</p>
+<hr />
+</div>
+<button class="toggle-btn" onclick="toggleAnswer()">정답 및 채점기준 보기</button>
+<div class="answer-section md-content" id="answerSection">
+<h2>혼합 세트 1 모범답안 및 채점기준표</h2>
+<h3>채점 총칙(혼합 세트 1~3 공통)</h3>
+<ol>
+<li>단답형(1점) 및 ①·② 각 요소(각 1점)는 부분점수 없음. '허용 답안 범위'에 명시된 표현은 정답으로 인정한다.</li>
+<li>①+② 복합형(2점)은 요소당 1점씩 독립 채점을 원칙으로 하되, ②가 ①에 종속되는 경우 해당 문항 채점기준표에 명시한다.</li>
+<li>맞춤법·띄어쓰기의 경미한 오류는 감점하지 않는다. 단, 용어의 핵심 형태가 달라져 다른 개념이 되는 경우는 오답 처리한다.</li>
+<li>서술형은 필수 채점 요소가 포함되어 있으면 문장 형식(개조식/서술식)을 불문한다.</li>
+<li>정답 외 오답을 병기한 경우(복수 답 기재)는 0점 처리한다.</li>
+</ol>
+<h3>1) ㉠ 빈칸 [1점]</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>모범답안</td>
+<td><strong>학교교육형</strong></td>
+</tr>
+<tr>
+<td>배점</td>
+<td>1점 (부분점수 없음)</td>
+</tr>
+<tr>
+<td>필수 채점 요소</td>
+<td>도시농업법 유형 명칭 '학교교육형'</td>
+</tr>
+<tr>
+<td>허용 답안 범위</td>
+<td>학교교육형 / 학교 교육형</td>
+</tr>
+<tr>
+<td>오답 처리 기준</td>
+<td>· '도심형', '근린생활권형', '도시농업공원형', '농장형·체험형' 등 다른 유형 → 0점<br>· '학교형', '학교 텃밭형' 등 법률 원문과 다른 표현 → 0점</td>
+</tr>
+</tbody>
+</table>
+<p><strong>출제 근거</strong>: 「도시농업의 육성 및 지원에 관한 법률」 제8조 제3호: "학교의 토지나 건축물 등을 활용한 <strong>학교교육형</strong> 도시농업" (웹수집자료 §4-1, <code>6실04-10</code> 자료)</p>
+<h3>2) 식물 분류 오류 교정 [2점 = ①1점 + ②1점]</h3>
+<p><strong>모범답안</strong></p>
+<blockquote>
+<p><strong>①</strong> ⓑ</p>
+<p><strong>②</strong> 옥수수를 가축(소)에게 먹이기 위해 재배하고 있으므로 식량 작물이 아니라 <strong>사료 작물</strong>로 분류해야 한다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>배점</td>
+<td>2점 (①·② 각 1점, ②는 ①에 종속 채점)</td>
+</tr>
+<tr>
+<td>① 필수 채점 요소</td>
+<td>기호 'ⓑ'</td>
+</tr>
+<tr>
+<td>② 필수 채점 요소</td>
+<td>다음 2요소 모두 포함 시 1점:<br>(i) 교정된 분류 = <strong>사료 작물</strong><br>(ii) 이유 = 가축에게 먹이기 위해 재배하는 것이므로 (활용 목적 근거)</td>
+</tr>
+<tr>
+<td>② 허용 답안 범위</td>
+<td>· "소에게 먹이기 위한 것이므로 사료 작물에 해당한다" 등 활용 목적과 연결된 서술 인정</td>
+</tr>
+<tr>
+<td>오답 처리 기준</td>
+<td>· ①에서 ⓐ 기재 → ① 0점, ② 0점 (ⓐ 방울토마토–원예 작물은 올바른 연결)<br>· ②에서 '녹비 작물', '특용 작물' 등 → 0점<br>· ②에서 분류만 쓰고 이유 없음 → 0점 (발문 조건 "활용 목적과 관련지어" 위반)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>출제 근거</strong>: 실과 각론 p.88 식물 자원 분류 표: "<strong>사료 작물</strong> — 가축에게 먹이기 위해 재배. 돼지감자, <strong>옥수수</strong>, 수수, 율무, 보리 등" / "식량 작물(식용 작물) — 인간의 주요 식량(주식)을 얻기 위해 재배. 벼, 보리, 밀, … 감자 등" — 옥수수는 활용 목적에 따라 식량 작물(간식)로도 분류 가능하나, (나)에서 '소에게 먹이려고'라는 목적이 명시되어 있으므로 사료 작물이 적절.</p>
+<h3>3) ㉡·㉢ [2점 = ①1점 + ②1점]</h3>
+<p><strong>모범답안</strong></p>
+<blockquote>
+<p><strong>①</strong> 생명체</p>
+<p><strong>②</strong> 배양육</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>배점</td>
+<td>2점 (①·② 각 1점, 독립 채점)</td>
+</tr>
+<tr>
+<td>① 필수 채점 요소</td>
+<td>생명기술 정의의 핵심 용어 '생명체'</td>
+</tr>
+<tr>
+<td>① 허용 답안 범위</td>
+<td>생명체</td>
+</tr>
+<tr>
+<td>② 필수 채점 요소</td>
+<td>생명기술 사례명 '배양육'</td>
+</tr>
+<tr>
+<td>② 허용 답안 범위</td>
+<td>배양육 / 배양 육 / 인공육 / 세포 배양육</td>
+</tr>
+<tr>
+<td>오답 처리 기준</td>
+<td>· ①에서 '동물', '식물', '미생물' 등 하위 범주 → 0점 (정의 원문은 '생명체'라는 포괄적 용어)<br>· ②에서 '인조 고기', '줄기세포 고기' 등 사례명이 아닌 서술적 표현 → 0점 (자료 밑줄에 이미 서술적 풀이가 있으며, 발문은 '이름'을 요구)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>출제 근거</strong>: 실과 각론 p.89: "생명기술: <strong>생명체</strong>의 특성이나 기능을 활용하여 인간에게 유용한 물질을 만드는 기술" / 생명기술 사례 표: "<strong>배양육</strong> — 동물 줄기세포를 배양하여 만드는 인조 고기" (<code>6실04-07/01_교육과정근거.md</code> §6)</p>
+<hr />
+</div>
+<a class="back" href="../">← 전체 문항 페이지로</a>
+</div>
+<script>
+function toggleAnswer() {
+  const sec = document.getElementById('answerSection');
+  const btn = event.target;
+  if (sec.classList.contains('show')) {
+    sec.classList.remove('show');
+    btn.textContent = '정답 및 채점기준 보기';
+  } else {
+    sec.classList.add('show');
+    btn.textContent = '정답 숨기기';
+    sec.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
+</body>
+</html>
